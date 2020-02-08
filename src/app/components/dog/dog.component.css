@@ -1,0 +1,50 @@
+li {list-style-type: none;}
+
+.table-items {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+.warnings {
+  color: crimson;}
+
+.options {margin: auto}
+
+#hide-button {
+  display: block;
+  margin: auto;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.table-items td, .table-items th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.table-items tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-items tr:hover {background-color: #ddd;}
+
+.table-items th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+.detalis {
+}
+button {margin: 5px}
+#submit {
+  margin-left: 0px;
+}
+
+.component-body {
+  margin: auto;
+  width: 50%;
+  border: 1px solid lightgray;
+  padding: 10px;
+}

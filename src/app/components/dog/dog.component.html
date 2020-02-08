@@ -1,0 +1,35 @@
+<!--<p >dog works!</p>-->
+<!--<select id="animal" (change)="getText($event)">-->
+<!--  <option *ngFor="let item of items">{{item.name}}, {{item.id}}</option>-->
+<!--</select>-->
+<div class="component-body">
+<div>
+<table class="table-items" *ngIf="isActive">
+  <thead>
+    <th>id</th>
+    <th>{{itemtype.substring(0,itemtype.length -1)}} name</th>
+  </thead>
+  <tr *ngFor="let item of items">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+  </tr>
+</table>
+  <p class="detalis" *ngIf="isActive">Lista dumneavoastra contine {{items.length}} elemente.</p>
+</div>
+<p>{{selectedAnimal}}</p>
+<p class="warnings" *ngIf="isLengthEnough()">Not enough items!</p>
+<div class="options" *ngIf="isActive">
+<input placeholder="Enter new item"
+       onfocus="this.placeholder = ''"
+       onblur="this.placeholder = 'Enter new item'"
+       #newItem id="item" type="text"
+       (keyup.enter)="enterAnimal(newItem.value); newItem.value = ''"
+/>
+
+<button id="submit" type="submit" (click)="enterAnimal(newItem.value); newItem.value=''; ">Add to list</button>
+  <button (click)="deleteItem()">Delete {{itemtype.substring(0,itemtype.length -1)}}</button>
+</div>
+  <button id="hide-button" (click)="changeState()" >{{buttonTitle}}</button>
+  <span class="warnings" *ngIf="warning">{{message}}</span>
+</div>
+
